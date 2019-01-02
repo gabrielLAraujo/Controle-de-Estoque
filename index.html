@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="resources/JS/jquery.js"></script>
+    <script type="text/javascript" src="resources/JS/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="resources/CSS/bootstrap.css">
+    <link rel="stylesheet" href="resources/CSS/index.css">
+
+</head>
+
+<body>
+
+    <div class="jumbotron">
+        <div class="container-fluid">
+            <h1 class="page-header text-center">Controle de Estoque</h1>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Cadastro no pool da embarcação</h3>
+        </div>
+        <div class="panel-body">
+            <form class="form" onsubmit="produtoController.adiciona(event)">
+                <div class="row">
+                    <div class="col-lg-2 form-group">
+                        <label for="inputEmbarcacao" class="col-form-label control-label">Embarcação:
+                            <input id="inputEmbarcacao" name="inputEmbarcacao" class="form-control" type="text"
+                                required>
+                        </label>
+                    </div>
+                    <div class="col-lg-2 form-group">
+                        <label for="inputCodigoPrd" class="col-form-label control-label">Codigo do Produto:
+                            <input id="inputCodigoPrd" name="inputCodigoPrd" class="form-control" type="text" required>
+                        </label>
+                    </div>
+                    <div class="col-lg container">
+                        <label for="inputDescricao" class="col-form-label control-label">Descrição do Produto:
+                            <textarea cols="105" rows="2" id="inputDescricao" name="inputDescricao" class="form-control"
+                                type="text" required></textarea>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <label for="inputUnidade" class="control-label">Unidade do Produto:
+                            <input class="form-control" id="inputUnidade" name="inputUnidade" type="text" required>
+                        </label>
+                    </div>
+
+                    <div class="col-sm-2 ">
+                        <label class="control-label">Tipo do Produto:
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" value="Consumivel" class="radios" name="optradio" checked>Consumivel
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" value="Peça Sobresalente" class="radios" name="optradio">Peça Sobresalente
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" value="Ferramenta" class="radios" name="optradio">Ferramenta
+                                </label>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <label for="inputConsumo" class="control-label">Consumo do Produto:
+                            <input class="form-control " id="inputConsumo" name="inputConsumo" type="text" required>
+                        </label>
+                    </div>
+                    <div class="col-sm">
+                        <label for="inputQuantidadeMinima">Quantidade Minima:
+                            <input class="form-control" type="number" id="inputQuantidadeMinima" name="inputQuantidadeMinima"
+                                required>
+                        </label>
+                    </div>
+                    <div class="col-sm">
+                        <label for="inputQuantidadeMaxima">Quantidade Maxima:
+                            <input class="form-control" type="number" id="inputQuantidadeMaxima" name="inputQuantidadeMaxima"
+                                required>
+                        </label>
+                    </div>
+                    <div class="col-sm">
+                        <br>
+                        <button class="btn btn-primary" id="inputCadastrar" name="inputCadastrar" type="submit">
+                            Cadastrar
+                        </button>
+                    </div>
+            </form>
+        </div>
+    </div>
+    <br>  
+
+    <div id="produtosView">
+    </div>
+
+    <script src="models/Produto.js"></script>
+    <script src="controller/ProdutoController.js"></script>
+    <script src="models/PoolProdutos.js"></script>
+    <script src="views/ProdutosView.js"></script>
+    <script>
+        let produtoController = new ProdutoController();
+    </script>
+
+</body>
+
+
+
+
+</html>
