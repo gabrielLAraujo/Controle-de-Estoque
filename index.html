@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Controle de Estoque</title>
     <script type="text/javascript" src="resources/JS/jquery.js"></script>
     <script type="text/javascript" src="resources/JS/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="resources/JS/jquery.mask.min.js"></script>
     <link rel="stylesheet" href="resources/CSS/bootstrap.css">
     <link rel="stylesheet" href="resources/CSS/index.css">
-
 </head>
 
 <body>
 
-    <div class="jumbotron">
+    <div class="container-fluid jumbotron">
         <div class="container-fluid">
             <h1 class="page-header text-center">Controle de Estoque</h1>
         </div>
     </div>
-    <div class="panel panel-primary">
+    <div class="container-fluid panel panel-primary">
         <div class="panel-heading">
             <h3 class="panel-title">Cadastro no pool da embarcação</h3>
         </div>
@@ -61,7 +61,8 @@
                             </div>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" value="Peça Sobresalente" class="radios" name="optradio">Peça Sobresalente
+                                    <input type="radio" value="Peça Sobresalente" class="radios" name="optradio">Peça
+                                    Sobresalente
                                 </label>
                             </div>
                             <div class="radio">
@@ -84,7 +85,7 @@
                         </label>
                     </div>
                     <div class="col-sm">
-                        <label for="inputQuantidadeMaxima">Quantidade Maxima:
+                        <label for="inputQuantidadeMaxima">Quantidade Máxima:
                             <input class="form-control" type="number" id="inputQuantidadeMaxima" name="inputQuantidadeMaxima"
                                 required>
                         </label>
@@ -98,9 +99,9 @@
             </form>
         </div>
     </div>
-    <br>  
+    <br>
 
-    <div id="produtosView">
+    <div class="container-fluid" id="produtosView">
     </div>
 
     <script src="models/Produto.js"></script>
