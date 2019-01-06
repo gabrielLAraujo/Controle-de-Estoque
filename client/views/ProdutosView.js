@@ -49,7 +49,6 @@ class ProdutosView {
     `;
     }
     update(model) {
-
         this._element.html(this._template(model));
     }
 }

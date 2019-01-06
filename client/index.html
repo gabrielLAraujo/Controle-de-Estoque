@@ -35,7 +35,8 @@
                     </div>
                     <div class="col-lg-2 form-group">
                         <label for="inputCodigoPrd" class="col-form-label control-label">Codigo do Produto:
-                            <input id="inputCodigoPrd" name="inputCodigoPrd" class="form-control" type="text" required>
+                            <input id="inputCodigoPrd" step="0.000.000.000" min="0.000.000.001" value="0" maxlength="13" data-mask-selectonfocus="true"
+                                name="inputCodigoPrd" class="form-control" type="text" required>
                         </label>
                     </div>
                     <div class="col-lg container">
@@ -75,18 +76,18 @@
 
                     <div class="col-sm-2">
                         <label for="inputConsumo" class="control-label">Consumo do Produto:
-                            <input class="form-control " id="inputConsumo" name="inputConsumo" type="text" required>
+                            <input class="form-control " min="1" step="1" value="1" id="inputConsumo" name="inputConsumo" type="text" required>
                         </label>
                     </div>
                     <div class="col-sm">
                         <label for="inputQuantidadeMinima">Quantidade Minima:
-                            <input class="form-control" type="number" id="inputQuantidadeMinima" name="inputQuantidadeMinima"
+                            <input class="form-control" min="1" step="1" value="1" type="number" id="inputQuantidadeMinima" name="inputQuantidadeMinima"
                                 required>
                         </label>
                     </div>
                     <div class="col-sm">
                         <label for="inputQuantidadeMaxima">Quantidade Máxima:
-                            <input class="form-control" type="number" id="inputQuantidadeMaxima" name="inputQuantidadeMaxima"
+                            <input class="form-control"  min="0" step="1" value="0" type="number" id="inputQuantidadeMaxima" name="inputQuantidadeMaxima"
                                 required>
                         </label>
                     </div>

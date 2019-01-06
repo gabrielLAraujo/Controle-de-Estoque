@@ -8,7 +8,10 @@ class ProdutoController {
         this._inputConsumo = $('#inputConsumo');
         this._inputQuantidadeMinima = $('#inputQuantidadeMinima');
         this._inputQuantidadeMaxima = $('#inputQuantidadeMaxima');
-        this._poolProdutos = new PoolProdutos();
+
+        this._poolProdutos = new PoolProdutos(model =>
+            this._produtosView.update(model)
+        );
         this._produtosView = new ProdutosView($('#produtosView'));
 
         this._produtosView.update(this._poolProdutos);
@@ -18,14 +21,13 @@ class ProdutoController {
         event.preventDefault();
         let produto = this._criaProduto();
         this._poolProdutos.adiciona(produto);
-        this._produtosView.update(this._poolProdutos);
         this._limpaFormulario();
-        
+
     }
     updateLinha(indice) {
-        let paramentros = $('.input_' + indice);        
+        let paramentros = $('.input_' + indice);
         let novoProduto = new Produto(
-            
+
             paramentros[0].value,
             paramentros[1].value,
             paramentros[2].value,
@@ -34,13 +36,12 @@ class ProdutoController {
             paramentros[5].value,
             paramentros[6].value,
             paramentros[7].value
-            )
-            
-            this._poolProdutos.updatePool(novoProduto,indice);
-            
+        )
+
+
 
     }
-    
+
     _limpaFormulario() {
         this._inputEmbarcacao.val('');
         this._inputCodigoPrd.val('');
