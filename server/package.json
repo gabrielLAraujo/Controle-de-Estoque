@@ -1,0 +1,22 @@
+{
+  "name": "controle-de-estoque",
+  "version": "1.0.0",
+  "description": "Sistema para controle de estoque interno de embarcações",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielLAraujo/Controle-de-Estoque.git"
+  },
+  "author": "Gabriel Leite",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielLAraujo/Controle-de-Estoque/issues"
+  },
+  "homepage": "https://github.com/gabrielLAraujo/Controle-de-Estoque#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
